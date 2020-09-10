@@ -9,9 +9,14 @@ class HigherLowerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHigherLowerBinding
     private var currentThrow: Int = 1
     private var lastThrow: Int = 1
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_higher_lower)
+    }
+
+    private fun updateUI() {
+        binding.lastThrow.text = getString(R.string.last_throw, lastThrow)
+
     }
 }
