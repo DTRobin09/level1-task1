@@ -12,11 +12,17 @@ class HigherLowerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_higher_lower)
+        binding = ActivityHigherLowerBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initViews()
     }
 
     private fun updateUI() {
         binding.lastThrow.text = getString(R.string.last_throw, lastThrow)
 
+    }
+
+    private fun initViews() {
+        updateUI()
     }
 }
