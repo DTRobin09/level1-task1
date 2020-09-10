@@ -26,6 +26,14 @@ class HigherLowerActivity : AppCompatActivity() {
     private fun updateUI() {
         binding.lastThrow.text = getString(R.string.last_throw, lastThrow)
 
+        when (currentThrow) {
+            1 -> binding.dice.setImageResource(R.drawable.dice1)
+            2 -> binding.dice.setImageResource(R.drawable.dice2)
+            3 -> binding.dice.setImageResource(R.drawable.dice3)
+            4 -> binding.dice.setImageResource(R.drawable.dice4)
+            5 -> binding.dice.setImageResource(R.drawable.dice5)
+            6 -> binding.dice.setImageResource(R.drawable.dice6)
+        }
     }
 
     private fun rollDice() {
